@@ -1,0 +1,20 @@
+[general]
+name=PT transfromation tools for Processing
+description=Transform vectors and rasters using Portuguese NTv2 datum transformation grids
+about=Requires additional datum transformation grids
+category=Plugins
+version=0.1.0
+qgisMinimumVersion=2.0
+
+icon=icons/pttransform.png
+tags=processing,grids,ntv2,transformation
+
+author=Alexander Bruy
+email=alexander.bruy@gmail.com
+
+homepage=
+tracker=https://github.com/alexbruy/processing_pttransform/issues
+repository=https://github.com/alexbruy/processing_pttransform
+
+experimental=True
+deprecated=False
