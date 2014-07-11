@@ -1,6 +1,6 @@
 [general]
-name=PT transfromation tools for Processing
-description=Transform vectors and rasters using Portuguese NTv2 datum transformation grids
+name=Portugal Datum transfromation tools for Processing
+description=Transform vectors using Portuguese NTv2 datum transformation grids
 about=Requires additional datum transformation grids
 category=Plugins
 version=0.1.0
