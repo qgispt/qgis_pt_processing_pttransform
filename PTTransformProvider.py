@@ -33,9 +33,10 @@ from processing.core.AlgorithmProvider import AlgorithmProvider
 from processing.core.ProcessingConfig import Setting, ProcessingConfig
 from processing.tools import system
 
-#from processing_pttransform.Pairwise import Pairwise
-#from processing_pttransform.OneToAll import OneToAll
-#from processing_pttransform.Advanced import Advanced
+from processing_pttransform.Datum73ToETR89PTTM06 import Datum73ToETR89PTTM06
+from processing_pttransform.Datum73MilToETR89PTTM06 import Datum73MilToETR89PTTM06
+from processing_pttransform.DatumLisboaToETR89PTTM06 import DatumLisboaToETR89PTTM06
+from processing_pttransform.DatumLisboaMilToETR89PTTM06 import DatumLisboaMilToETR89PTTM06
 
 
 class PTTransformProvider(AlgorithmProvider):
@@ -45,7 +46,11 @@ class PTTransformProvider(AlgorithmProvider):
 
         self.activate = False
 
-        self.alglist = []
+        self.alglist = [Datum73ToETR89PTTM06(),
+                        Datum73MilToETR89PTTM06(),
+                        DatumLisboaToETR89PTTM06(),
+                        DatumLisboaMilToETR89PTTM06()
+                       ]
         for alg in self.alglist:
             alg.provider = self
 
@@ -56,13 +61,13 @@ class PTTransformProvider(AlgorithmProvider):
         AlgorithmProvider.unload(self)
 
     def getName(self):
-        return 'PT Transform'
+        return 'Portugal Datum Transformations'
 
     def getDescription(self):
-        return 'PT Transform'
+        return 'Portugal Datum Transformations'
 
     def getIcon(self):
-        return QIcon(os.path.dirname(__file__) + '/icons/pttransform.png')
+        return QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def _loadAlgorithms(self):
         self.algs = self.alglist

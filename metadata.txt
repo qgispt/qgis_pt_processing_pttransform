@@ -6,7 +6,7 @@ category=Plugins
 version=0.1.0
 qgisMinimumVersion=2.0
 
-icon=icons/pttransform.png
+icon=icons/pttransform.svg
 tags=processing,grids,ntv2,transformation
 
 author=Alexander Bruy
