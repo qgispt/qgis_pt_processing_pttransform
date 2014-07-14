@@ -1,0 +1,9 @@
+PT datum transformation for Processing
+--------------------------------------
+Portugal Datum Transfromation tools for Processing.
+
+Processing (former SEXTANTE) is a geoprocessing environment that can be used to
+call native and third party algorithms from QGIS, making your spatial analysis
+tasks more productive and easy to accomplish.
+
+Developed by Alexander Bruy for Faunalia (http://faunalia.eu).
