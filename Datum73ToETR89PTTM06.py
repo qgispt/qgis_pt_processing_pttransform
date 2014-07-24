@@ -33,6 +33,7 @@ from PyQt4.QtGui import *
 from qgis.core import *
 
 from processing.parameters.ParameterVector import ParameterVector
+from processing.parameters.ParameterSelection import ParameterSelection
 from processing.outputs.OutputVector import OutputVector
 
 from processing.tools.system import *
@@ -45,6 +46,8 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
+    GRID = 'GRELHAS'
+    GRID_OPTIONS = ['JAG', 'DGT']
 
     def defineCharacteristics(self):
         self.name = 'From Datum 73 to ETR89-PTTM06'
@@ -52,6 +55,8 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
+	self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
+                          self.GRID_OPTIONS))
         self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 
     def processAlgorithm(self, progress):
@@ -61,16 +66,28 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
         output = self.getOutputFromName(self.OUTPUT)
         outFile = output.value
 
-        arguments = ['-f',
-                     'ESRI Shapefile',
-                     '-s_srs',
-                     '+init=pt:d73hg +wktext',
-                     '-t_srs',
-                     '+init=pt:pttm06 +wktext'
-                    ]
+        arguments = []
+        if self.GRID_OPTIONS[self.getParameterValue(self.GRID)] == 'JAG':
+            arguments.append('-s_srs')
+            arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=180.598 +y_0=-86.99 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/pt73_e89.gsb +wktext +units=m +no_defs')
+        else:
+            arguments.append('-s_srs')
+            arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=180.598 +y_0=-86.99 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/D73_ETRS89_geo.gsb +wktext +units=m +no_defs')
+        arguments.append('-t_srs')
+        arguments.append('EPSG:3763')
+        arguments.append('-f')
+        arguments.append('ESRI Shapefile')
+       
+#        arguments = ['-f',
+#                     'ESRI Shapefile',
+#                     '-s_srs',
+#                     '+init=pt:d73hg +wktext',
+#                     '-t_srs',
+#                     'EPSG:3763'
+#                    ]
+	
         arguments.append(outFile)
         arguments.append(conn)
 
         commands = ['ogr2ogr', GdalUtils.escapeAndJoin(arguments)]
         GdalUtils.runGdal(commands, progress)
-
