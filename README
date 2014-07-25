@@ -1,6 +1,8 @@
 Mainland Portugal Datum Transfromation tools for the QGIS Processing toolbox
 --------------------------------------
 
+![Mainland Portugal Datum Transfromation tools for the QGIS Processing toolbox](icons/pttransform.png?raw=true "Mainland Portugal Datum Transfromation tools for the QGIS Processing toolbox")
+
 Processing (former SEXTANTE) is a geoprocessing environment that can be used to call native and third party algorithms from QGIS, making your spatial analysis
 tasks more productive and easy to accomplish.
 
