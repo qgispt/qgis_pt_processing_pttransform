@@ -6,7 +6,7 @@ Mainland Portugal Datum Transformation tools for the QGIS Processing toolbox
 Processing (former SEXTANTE) is a geoprocessing environment that can be used to call native and third party algorithms from QGIS, making your spatial analysis
 tasks more productive and easy to accomplish.
 
-This plugin allows to trasform raster and vectors from obsolete mainland Portugal CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS 
+This plugin allows easy datum transformations from obsolete mainland Portugal CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS 
 (ETRS89-PTTM06) using NTv2 datum transformation grids.
 
 Supported NTv2 grids are the ones provided by Prof. José Alberto Gonçalves and the ones provided by the Direção-Geral do Território (DGT), see:
