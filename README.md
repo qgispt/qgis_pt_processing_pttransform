@@ -27,4 +27,4 @@ Then the user just selects the input layer and the grid he/she want to use.
 
 As any other tool in the Processing toolbox this tools can be run in batch mode.
 
-The plugin was developed by Alexander Bruy, Pedro Venâncio and Faunalia (http://www.faunalia.eu/) with the upport of the Portugal QGIS User Group (http://www.qgis.pt/).
+The plugin was developed by Alexander Bruy, Pedro Venâncio and Faunalia (http://www.faunalia.eu/) with the support of the Portugal QGIS User Group (http://www.qgis.pt/).
