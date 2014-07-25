@@ -1,4 +1,4 @@
-Mainland Portugal Datum Transfromation tools for the QGIS Processing toolbox
+Mainland Portugal Datum Transformation tools for the QGIS Processing toolbox
 --------------------------------------
 
 ![](/icons/pttransform.png)
