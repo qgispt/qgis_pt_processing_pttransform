@@ -2,11 +2,11 @@
 
 """
 ***************************************************************************
-    Datum73MilToETR89PTTM06.py
+    Datum73MilToETR89PTTM06_Raster.py
     ---------------------
-    Date                 : July 2014
-    Copyright            : (C) 2014 by Alexander Bruy
-    Email                : alexander dot bruy at gmail dot com
+    Date                 : August 2012
+    Copyright            : (C) 2012 by Victor Olaya
+    Email                : volayaf at gmail dot com
 ***************************************************************************
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -17,9 +17,9 @@
 ***************************************************************************
 """
 
-__author__ = 'Alexander Bruy'
-__date__ = 'July 2014'
-__copyright__ = '(C) 2014, Alexander Bruy'
+__author__ = 'Victor Olaya'
+__date__ = 'August 2012'
+__copyright__ = '(C) 2012, Victor Olaya'
 
 # This will get replaced with a git SHA1 when you do a git archive
 
@@ -27,22 +27,18 @@ __revision__ = '$Format:%H$'
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-
 from qgis.core import *
-
-from processing.parameters.ParameterVector import ParameterVector
+from processing.algs.gdal.GdalAlgorithm import GdalAlgorithm
+from processing.parameters.ParameterRaster import ParameterRaster
 from processing.parameters.ParameterSelection import ParameterSelection
-from processing.outputs.OutputVector import OutputVector
-
-from processing.tools.system import *
-
-from processing.algs.gdal.OgrAlgorithm import OgrAlgorithm
+from processing.parameters.ParameterCrs import ParameterCrs
+from processing.parameters.ParameterNumber import ParameterNumber
+from processing.parameters.ParameterString import ParameterString
+from processing.outputs.OutputRaster import OutputRaster
 from processing.algs.gdal.GdalUtils import GdalUtils
 
 
-class Datum73MilToETR89PTTM06(OgrAlgorithm):
+class Datum73MilToETR89PTTM06_Raster(GdalAlgorithm):
 
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
@@ -50,22 +46,15 @@ class Datum73MilToETR89PTTM06(OgrAlgorithm):
     GRID_OPTIONS = ['JAG', 'DGT']
 
     def defineCharacteristics(self):
-        self.name = 'From Datum 73 Militar to ETRS89-PTTM06'
-        self.group = 'Vector Datum Transformations'
-
-        self.addParameter(ParameterVector(self.INPUT, 'Input layer',
-                          [ParameterVector.VECTOR_TYPE_ANY]))
-	self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
+        self.name = 'From Datum 73 Militar to ETRS89-PTTM06 Raster'
+        self.group = 'Raster Datum Transformations'
+        self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
+        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
+
 
     def processAlgorithm(self, progress):
-        inLayer = self.getParameterValue(self.INPUT)
-        conn = self.ogrConnectionString(inLayer)
-
-        output = self.getOutputFromName(self.OUTPUT)
-        outFile = output.value
-        
         arguments = []
         if self.GRID_OPTIONS[self.getParameterValue(self.GRID)] == 'JAG':
             arguments.append('-s_srs')
@@ -75,19 +64,15 @@ class Datum73MilToETR89PTTM06(OgrAlgorithm):
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/D73_ETRS89_geo.gsb +wktext +units=m +no_defs')
         arguments.append('-t_srs')
         arguments.append('EPSG:3763')
-        arguments.append('-f')
-        arguments.append('ESRI Shapefile')
+        arguments.append('-r')
+        arguments.append('bilinear')
+        arguments.append('-dstnodata')
+        arguments.append('nan')
+        arguments.append('-of')
+        out = self.getOutputValue(self.OUTPUT)
+        arguments.append(GdalUtils.getFormatShortNameFromFilename(out))
+        arguments.append(self.getParameterValue(self.INPUT))
+        arguments.append(out)
 
-#        arguments = ['-f',
-#                     'ESRI Shapefile',
-#                     '-s_srs',
-#                     '+init=pt:d73hg +wktext',
-#                     '-t_srs',
-#                     'EPSG:3763'
-#                    ]
-
-        arguments.append(outFile)
-        arguments.append(conn)
-
-        commands = ['ogr2ogr', GdalUtils.escapeAndJoin(arguments)]
-        GdalUtils.runGdal(commands, progress)
+        GdalUtils.runGdal(['gdalwarp', GdalUtils.escapeAndJoin(arguments)],
+                          progress)

@@ -1,4 +1,4 @@
-PT datum transformation for Processing
+Portugal datum transformation for Processing
 --------------------------------------
 Portugal Datum Transfromation tools for Processing.
 
@@ -6,4 +6,19 @@ Processing (former SEXTANTE) is a geoprocessing environment that can be used to
 call native and third party algorithms from QGIS, making your spatial analysis
 tasks more productive and easy to accomplish.
 
-Developed by Alexander Bruy for Faunalia (http://faunalia.eu).
+This plugin allows to trasform raster and vectors from obsolete mainland Portugal 
+CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS 
+(ETRS89-PTTM06) using NTv2 datum transformation grids.
+
+Supported NTv2 grids are the ones provided by Prof. José Alberto Gonçalves and the ones
+provided by the Direção-Geral do Território (DGT), see:
+
+http://www.fc.up.pt/pessoas/jagoncal/coordenadas/
+http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/
+
+The grids files are shipped with the plugin, so no further actions are required by the user.
+
+The plugin was developed by Alexander Bruy, Pedro Venâncio and Faunalia (http://www.faunalia.eu/) with 
+the Supporte of the Portugal QGIS User Group,
+
+http://www.qgis.pt/
