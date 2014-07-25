@@ -17,7 +17,13 @@ http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coor
 
 The grids files are shipped with the plugin, so no further actions are required by the user.
 
-The plugin was made to be as simpliest as it can be for the user: the tools are organized first by data type (raster or vector) and then by origin CRS (Datum 73 or Datum Lisboa or ED50). Then the user just selects the input layer and the grid he/she want to use.
+The plugin was made to be as simpliest as it can be for the user: the tools are organized first by data type (raster or vector) and then by origin CRS (Datum 73 or Datum Lisboa or ED50). 
+
+![](/icons/pttransform_menu.png)
+
+Then the user just selects the input layer and the grid he/she want to use.
+
+![](/icons/pttransform_gui.png)
 
 As any other tool in the Processing toolbox this tools can be run in batch mode.
 
