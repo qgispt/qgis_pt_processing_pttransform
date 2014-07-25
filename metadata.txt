@@ -1,5 +1,5 @@
 [general]
-name=Portugal datum transformation tools for the QGIS Processing toolbox
+name=Portugal datum transformations
 description=Easy datum transformation from obsolete mainland Portugal CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS (ETRS89-PTTM06) using NTv2 datum transformation grids.
 about=Supported by the Portugal QGIS user group. Developed by Alexander Bruy, Pedro Venâncio and Faunalia (http://www.faunalia.eu/).
 category=Plugins
@@ -12,7 +12,7 @@ tags=processing,grids,ntv2,transformation,datum,Portugal
 author=Alexander Bruy, Pedro Venâncio, Giovanni Manghi
 email=alexander.bruy@gmail.com
 
-homepage=
+homepage=http://qgis.pt/transformacoes_datum.html
 tracker=https://github.com/alexbruy/processing_pttransform/issues
 repository=https://github.com/alexbruy/processing_pttransform
 
