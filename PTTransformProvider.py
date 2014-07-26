@@ -37,6 +37,12 @@ from processing_pttransform.Datum73ToETR89PTTM06 import Datum73ToETR89PTTM06
 from processing_pttransform.Datum73MilToETR89PTTM06 import Datum73MilToETR89PTTM06
 from processing_pttransform.DatumLisboaToETR89PTTM06 import DatumLisboaToETR89PTTM06
 from processing_pttransform.DatumLisboaMilToETR89PTTM06 import DatumLisboaMilToETR89PTTM06
+from processing_pttransform.DatumLisboaMilToETR89PTTM06_Raster import DatumLisboaMilToETR89PTTM06_Raster
+from processing_pttransform.DatumLisboaToETR89PTTM06_Raster import DatumLisboaToETR89PTTM06_Raster
+from processing_pttransform.Datum73ToETR89PTTM06_Raster import Datum73ToETR89PTTM06_Raster
+from processing_pttransform.Datum73MilToETR89PTTM06_Raster import Datum73MilToETR89PTTM06_Raster
+from processing_pttransform.UTM29NED50ToETR89PTTM06_Raster import UTM29NED50ToETR89PTTM06_Raster
+from processing_pttransform.UTM29NED50ToETR89PTTM06 import UTM29NED50ToETR89PTTM06
 
 
 class PTTransformProvider(AlgorithmProvider):
@@ -49,7 +55,13 @@ class PTTransformProvider(AlgorithmProvider):
         self.alglist = [Datum73ToETR89PTTM06(),
                         Datum73MilToETR89PTTM06(),
                         DatumLisboaToETR89PTTM06(),
-                        DatumLisboaMilToETR89PTTM06()
+                        DatumLisboaMilToETR89PTTM06(),
+                        DatumLisboaMilToETR89PTTM06_Raster(),
+                        DatumLisboaToETR89PTTM06_Raster(),
+                        Datum73ToETR89PTTM06_Raster(),
+                        Datum73MilToETR89PTTM06_Raster(),
+                        UTM29NED50ToETR89PTTM06_Raster(),
+                        UTM29NED50ToETR89PTTM06()
                        ]
         for alg in self.alglist:
             alg.provider = self
