@@ -1,7 +1,7 @@
 Mainland Portugal Datum Transformation tools for the QGIS Processing toolbox
 --------------------------------------
 
-![](../icons/pttransform.png)
+.. image :: ../icons/pttransform.png
 
 Processing (former SEXTANTE) is a geoprocessing environment that can be used to call native and third party algorithms from QGIS, making your spatial analysis
 tasks more productive and easy to accomplish.
@@ -19,11 +19,11 @@ The grids files are shipped with the plugin, so no further actions are required 
 
 The plugin was made to be as simpliest as it can be for the user: the tools are organized first by data type (raster or vector) and then by origin CRS (Datum 73 or Datum Lisboa or ED50). 
 
-![](../icons/pttransform_menu.png)
+.. image :: ../icons/pttransform_gui.png
 
 Then the user just selects the input layer and the grid he/she want to use.
 
-![](../icons/pttransform_gui.png)
+.. image :: ../icons/pttransform_gui.png
 
 As any other tool in the Processing toolbox this tools can be run in batch mode.
 
