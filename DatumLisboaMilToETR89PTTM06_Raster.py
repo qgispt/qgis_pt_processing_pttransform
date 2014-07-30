@@ -4,9 +4,10 @@
 ***************************************************************************
     DatumLisboaMilToETR89PTTM06_Raster.py
     ---------------------
-    Date                 : August 2012
-    Copyright            : (C) 2012 by Victor Olaya
-    Email                : volayaf at gmail dot com
+    Date                 : July 2014
+    Copyright            : (C) 2014 by Pedro Venâncio, Giovanni Manghi
+    Email                : pedrongvenancio at yahoo dot com
+                           giovanni dot manghi at gmail dot com
 ***************************************************************************
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
@@ -17,9 +18,9 @@
 ***************************************************************************
 """
 
-__author__ = 'Victor Olaya'
-__date__ = 'August 2012'
-__copyright__ = '(C) 2012, Victor Olaya'
+__author__ = 'Pedro Venâncio, Giovanni Manghi'
+__date__ = 'July 2014'
+__copyright__ = '(C) 2014, Pedro Venâncio, Giovanni Manghi'
 
 # This will get replaced with a git SHA1 when you do a git archive
 
