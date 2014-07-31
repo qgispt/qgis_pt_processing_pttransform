@@ -27,7 +27,6 @@ __revision__ = '$Format:%H$'
 
 import os
 
-from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from qgis.core import *
@@ -54,6 +53,9 @@ class DatumLisboaMilToETR89PTTM06(OgrAlgorithm):
     GRID = 'GRELHAS'
     GRID_OPTIONS = ['Jose Alberto Goncalves',
                     'Direccao Geral do Territorio']
+
+    def getIcon(self):
+        return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
         self.name = 'From Datum Lisboa Militar to ETRS89-PTTM06'

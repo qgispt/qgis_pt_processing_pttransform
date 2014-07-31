@@ -28,6 +28,8 @@ __revision__ = '$Format:%H$'
 
 import os
 
+from PyQt4.QtGui import *
+
 from qgis.core import *
 
 try:
@@ -45,6 +47,9 @@ class UTM29NED50ToETR89PTTM06_Raster(GdalAlgorithm):
 
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
+
+    def getIcon(self):
+        return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
         self.name = 'From UTM 29N ED50 to ETR89-PTTM06 Raster'
