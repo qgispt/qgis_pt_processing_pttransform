@@ -39,11 +39,10 @@ except:
     from processing.core.parameters import ParameterVector
     from processing.core.outputs import OutputVector
 
-from processing.tools.system import *
-
 from processing.algs.gdal.OgrAlgorithm import OgrAlgorithm
 from processing.algs.gdal.GdalUtils import GdalUtils
 
+from processing.tools.system import *
 
 class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
 
@@ -70,10 +69,10 @@ class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
                      '-s_srs',
                      '+proj=utm +zone=29 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/ptED_e89.gsb +wktext +units=m +no_defs',
                      '-t_srs',
-                     'EPSG:3763'
+                     'EPSG:3763',
+                     outFile,
+                     conn
                     ]
-        arguments.append(outFile)
-        arguments.append(conn)
 
         commands = ['ogr2ogr', GdalUtils.escapeAndJoin(arguments)]
         GdalUtils.runGdal(commands, progress)

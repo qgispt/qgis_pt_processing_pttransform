@@ -52,7 +52,8 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
     GRID = 'GRELHAS'
-    GRID_OPTIONS = ['JAG', 'DGT']
+    GRID_OPTIONS = ['Jose Alberto Goncalves',
+                    'Direccao Geral do Territorio']
 
     def defineCharacteristics(self):
         self.name = 'From Datum 73 to ETRS89-PTTM06'
@@ -60,7 +61,7 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
+        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
                           self.GRID_OPTIONS))
         self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 
@@ -71,12 +72,12 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
         output = self.getOutputFromName(self.OUTPUT)
         outFile = output.value
 
-        arguments = []
-        if self.GRID_OPTIONS[self.getParameterValue(self.GRID)] == 'JAG':
-            arguments.append('-s_srs')
+        arguments = ['-s_srs']
+        if self.getParameterValue(self.GRID) == 0:
+            # Jose Alberto Goncalves
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=180.598 +y_0=-86.99 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/pt73_e89.gsb +wktext +units=m +no_defs')
         else:
-            arguments.append('-s_srs')
+            # Direccao Geral do Territorio
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=180.598 +y_0=-86.99 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/D73_ETRS89_geo.gsb +wktext +units=m +no_defs')
         arguments.append('-t_srs')
         arguments.append('EPSG:3763')

@@ -49,24 +49,24 @@ class Datum73MilToETR89PTTM06_Raster(GdalAlgorithm):
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
     GRID = 'GRELHAS'
-    GRID_OPTIONS = ['JAG', 'DGT']
+    GRID_OPTIONS = ['Jose Alberto Goncalves',
+                    'Direccao Geral do Territorio']
 
     def defineCharacteristics(self):
         self.name = 'From Datum 73 Militar to ETRS89-PTTM06 Raster'
         self.group = 'Raster Datum Transformations'
         self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
-        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
+        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
                           self.GRID_OPTIONS))
         self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
 
-
     def processAlgorithm(self, progress):
-        arguments = []
-        if self.GRID_OPTIONS[self.getParameterValue(self.GRID)] == 'JAG':
-            arguments.append('-s_srs')
+        arguments = ['-s_srs']
+        if self.getParameterValue(self.GRID) == 0:
+            # Jose Alberto Goncalves
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/pt73_e89.gsb +wktext +units=m +no_defs')
         else:
-            arguments.append('-s_srs')
+            # Direccao Geral do Territorio
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/D73_ETRS89_geo.gsb +wktext +units=m +no_defs')
         arguments.append('-t_srs')
         arguments.append('EPSG:3763')
