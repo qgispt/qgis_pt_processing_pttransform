@@ -32,9 +32,14 @@ from PyQt4.QtGui import *
 
 from qgis.core import *
 
-from processing.parameters.ParameterVector import ParameterVector
-from processing.parameters.ParameterSelection import ParameterSelection
-from processing.outputs.OutputVector import OutputVector
+try:
+    from processing.parameters.ParameterVector import ParameterVector
+    from processing.parameters.ParameterSelection import ParameterSelection
+    from processing.outputs.OutputVector import OutputVector
+except:
+    from processing.core.parameters import ParameterVector
+    from processing.core.parameters import ParameterSelection
+    from processing.core.outputs import OutputVector
 
 from processing.tools.system import *
 
@@ -55,7 +60,7 @@ class DatumLisboaMilToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-	self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
+        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar (JAG - Jose Alberto Goncalves; DGT - Direccao Geral do Territorio)',
                           self.GRID_OPTIONS))
         self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 
@@ -65,7 +70,7 @@ class DatumLisboaMilToETR89PTTM06(OgrAlgorithm):
 
         output = self.getOutputFromName(self.OUTPUT)
         outFile = output.value
-        
+
         arguments = []
         if self.GRID_OPTIONS[self.getParameterValue(self.GRID)] == 'JAG':
             arguments.append('-s_srs')
@@ -77,14 +82,6 @@ class DatumLisboaMilToETR89PTTM06(OgrAlgorithm):
         arguments.append('EPSG:3763')
         arguments.append('-f')
         arguments.append('ESRI Shapefile')
-
-#        arguments = ['-f',
-#                     'ESRI Shapefile',
-#                     '-s_srs',
-#                     '+init=pt:d73hg +wktext',
-#                     '-t_srs',
-#                     'EPSG:3763'
-#                    ]
 
         arguments.append(outFile)
         arguments.append(conn)

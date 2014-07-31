@@ -29,13 +29,18 @@ __revision__ = '$Format:%H$'
 import os
 
 from qgis.core import *
+
+try:
+    from processing.parameters.ParameterRaster import ParameterRaster
+    from processing.parameters.ParameterSelection import ParameterSelection
+    from processing.outputs.OutputRaster import OutputRaster
+except:
+    from processing.core.parameters import ParameterRaster
+    from processing.core.parameters import ParameterSelection
+    from processing.core.outputs import OutputRaster
+
+
 from processing.algs.gdal.GdalAlgorithm import GdalAlgorithm
-from processing.parameters.ParameterRaster import ParameterRaster
-from processing.parameters.ParameterSelection import ParameterSelection
-from processing.parameters.ParameterCrs import ParameterCrs
-from processing.parameters.ParameterNumber import ParameterNumber
-from processing.parameters.ParameterString import ParameterString
-from processing.outputs.OutputRaster import OutputRaster
 from processing.algs.gdal.GdalUtils import GdalUtils
 
 
