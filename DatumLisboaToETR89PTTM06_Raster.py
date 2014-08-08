@@ -62,7 +62,7 @@ class DatumLisboaToETR89PTTM06_Raster(GdalAlgorithm):
         self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
         self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Ntv2 Grid to use (origin)'))
 
     def processAlgorithm(self, progress):
         arguments = ['-s_srs']
