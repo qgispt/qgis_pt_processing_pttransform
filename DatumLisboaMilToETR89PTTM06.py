@@ -63,7 +63,7 @@ class DatumLisboaMilToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
+        self.addParameter(ParameterSelection(self.GRID, 'Ntv2 Grid to use (origin)',
                           self.GRID_OPTIONS))
         self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 
