@@ -10,7 +10,7 @@ icon=icons/pttransform.svg
 tags=processing,grids,ntv2,transformation,datum,Portugal
 
 author=Alexander Bruy, Pedro Venâncio, Giovanni Manghi
-email=alexander.bruy@gmail.com
+email=qgis.portugal@gmail.com
 
 homepage=http://qgis.pt/plugins.html
 tracker=https://github.com/qgispt/processing_pttransform/issues
