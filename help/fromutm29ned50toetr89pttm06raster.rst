@@ -4,8 +4,8 @@ ED50 to ETRS89-PTTM06
 Description
 -----------
 
-The tool take an input raster defined with the "ED50" CRS (EPSG 23029) and creates an output geotiff defined with the ETRS89-PTTM06 CRS (EPSG 3763).
-Datum transformation NTv2 are used in the process, to garauntee the smallest error as possible.
+The tool takes an input raster layer defined with the "ED50" CRS (EPSG 23029) and creates an output geotiff defined with the ETRS89-PTTM06 CRS (EPSG 3763).
+Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
 
 Parameters
 ----------

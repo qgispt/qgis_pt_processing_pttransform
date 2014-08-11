@@ -63,7 +63,7 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addParameter(ParameterSelection(self.GRID, 'Ntv2 Grid to use (origin)',
+        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
                           self.GRID_OPTIONS))
         self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 

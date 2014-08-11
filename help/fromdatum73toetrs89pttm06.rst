@@ -4,8 +4,8 @@ Datum 73 to ETRS89-PTTM06
 Description
 -----------
 
-The tool take an input vector defined with the "Datum 73" CRS (ESRI 102161 or EPSG 27493) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
-Datum transformation NTv2 are used in the process, to garauntee the smallest error as possible.
+The tool takes an input vector layer defined with the "Datum 73" CRS (ESRI 102161 or EPSG 27493) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
+Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
 
 Parameters
 ----------

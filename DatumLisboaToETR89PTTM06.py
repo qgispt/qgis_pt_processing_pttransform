@@ -63,9 +63,9 @@ class DatumLisboaToETR89PTTM06(OgrAlgorithm):
 
         self.addParameter(ParameterVector(self.INPUT, 'Input layer',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
+        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputVector(self.OUTPUT, 'Ntv2 Grid to use (origin)'))
+        self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)

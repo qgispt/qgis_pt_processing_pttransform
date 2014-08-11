@@ -61,7 +61,7 @@ class Datum73MilToETR89PTTM06_Raster(GdalAlgorithm):
         self.name = 'From Datum 73 Militar to ETRS89-PTTM06 Raster'
         self.group = 'Raster Datum Transformations'
         self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
-        self.addParameter(ParameterSelection(self.GRID, 'Ntv2 Grid to use (origin)',
+        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
                           self.GRID_OPTIONS))
         self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
 

@@ -60,9 +60,9 @@ class DatumLisboaToETR89PTTM06_Raster(GdalAlgorithm):
         self.name = 'From Datum Lisboa to ETRS89-PTTM06 Raster'
         self.group = 'Raster Datum Transformations'
         self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
-        self.addParameter(ParameterSelection(self.GRID, 'Grelhas a Usar',
+        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputRaster(self.OUTPUT, 'Ntv2 Grid to use (origin)'))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
 
     def processAlgorithm(self, progress):
         arguments = ['-s_srs']
