@@ -1,13 +1,13 @@
 [general]
 name=Portugal datum transformations
-description=Easy datum transformation from obsolete mainland Portugal CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS (ETRS89-PTTM06) using NTv2 datum transformation grids.
-about=Supported by the Portugal QGIS user group. Developed by Alexander Bruy, Pedro Venâncio and Faunalia (http://www.faunalia.eu/).
+description=Transformação de Datum dos SRCs usados no passado em Portugal Continental (Datum 73, Datum Lisboa e Datum Europeu 1950) para o novo SRC PT-TM06/ETRS89, utilizando as grelhas NTv2 do Professor José Alberto Gonçalves e da Direção-Geral do Território.
+about=Apoiado pelo Grupo de Utilizadores QGIS PT. Desenvolvido por Alexander Bruy, Pedro Venâncio e Faunalia (http://www.faunalia.eu/).
 category=Plugins
 version=0.1.0
 qgisMinimumVersion=2.4
 
 icon=icons/pttransform.svg
-tags=processing,grids,ntv2,transformation,datum,Portugal
+tags=processing,grelhas,ntv2,transformação,datum,Portugal
 
 author=Alexander Bruy, Pedro Venâncio, Giovanni Manghi
 email=qgis.portugal@gmail.com

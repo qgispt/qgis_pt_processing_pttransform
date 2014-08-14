@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: latin-1 -*-
 
 """
 ***************************************************************************
@@ -73,10 +73,10 @@ class PTTransformProvider(AlgorithmProvider):
         AlgorithmProvider.unload(self)
 
     def getName(self):
-        return 'Portugal Datum Transformations'
+        return 'Transformações de Datum para Portugal'
 
     def getDescription(self):
-        return 'Portugal Datum Transformations'
+        return 'Transformações de Datum para Portugal'
 
     def getIcon(self):
         return QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
