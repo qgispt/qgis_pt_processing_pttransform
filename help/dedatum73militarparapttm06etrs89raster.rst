@@ -1,10 +1,10 @@
-Datum Lisboa to ETRS89-PTTM06
+Datum 73 Militar to ETRS89-PTTM06
 ================================
 
 Description
 -----------
 
-The tool takes an input vector layer defined with the "Datum Lisboa" CRS (ESRI 102165 or EPSG 20791) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
+The tool takes an input vector layer defined with the "Datum 73 Militar" CRS (ESRI 102160) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
 Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
 
 Parameters

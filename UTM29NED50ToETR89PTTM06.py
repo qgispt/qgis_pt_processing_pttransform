@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: latin-1 -*-
 
 """
 ***************************************************************************
@@ -52,12 +52,12 @@ class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'From UTM 29N ED50 to ETR89-PTTM06'
-        self.group = 'Vector Datum Transformations'
+        self.name = 'De UTM 29N ED50 para PT-TM06/ETRS89'
+        self.group = 'Transformações de Datum em Vectores'
 
-        self.addParameter(ParameterVector(self.INPUT, 'Input layer',
+        self.addParameter(ParameterVector(self.INPUT, 'Ficheiro de Entrada',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
+        self.addOutput(OutputVector(self.OUTPUT, 'Ficheiro de Saída'))
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)

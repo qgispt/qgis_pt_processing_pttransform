@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: latin-1 -*-
 
 """
 ***************************************************************************
@@ -52,10 +52,10 @@ class UTM29NED50ToETR89PTTM06_Raster(GdalAlgorithm):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'From UTM 29N ED50 to ETR89-PTTM06 Raster'
-        self.group = 'Raster Datum Transformations'
-        self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
-        self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
+        self.name = 'De UTM 29N ED50 para PT-TM06/ETRS89 Raster'
+        self.group = 'Transformações de Datum em Rasters'
+        self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Ficheiro de Saída'))
 
     def processAlgorithm(self, progress):
         arguments = ['-s_srs',

@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+# -*- coding: latin-1 -*-
 """
 ***************************************************************************
     Datum73ToETR89PTTM06.py
@@ -51,21 +50,21 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
     GRID = 'GRELHAS'
-    GRID_OPTIONS = ['Jose Alberto Goncalves',
-                    'Direccao Geral do Territorio']
+    GRID_OPTIONS = ['José Alberto Gonçalves',
+                    'Direção-Geral do Territorio']
 
     def getIcon(self):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'From Datum 73 to ETRS89-PTTM06'
-        self.group = 'Vector Datum Transformations'
+        self.name = 'De Datum 73 para PT-TM06/ETRS89'
+        self.group = 'Transformações de Datum em Vectores'
 
-        self.addParameter(ParameterVector(self.INPUT, 'Input layer',
+        self.addParameter(ParameterVector(self.INPUT, 'Ficheiro de Entrada',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
+        self.addParameter(ParameterSelection(self.GRID, 'Grelha NTv2 a usar (Fonte)',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputVector(self.OUTPUT, 'Output layer'))
+        self.addOutput(OutputVector(self.OUTPUT, 'Ficheiro de Saída'))
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)

@@ -1,5 +1,5 @@
 [general]
-name=Portugal datum transformations
+name=Transformação de Datum para Portugal
 description=Transformação de Datum dos SRCs usados no passado em Portugal Continental (Datum 73, Datum Lisboa e Datum Europeu 1950) para o novo SRC PT-TM06/ETRS89, utilizando as grelhas NTv2 do Professor José Alberto Gonçalves e da Direção-Geral do Território.
 about=Apoiado pelo Grupo de Utilizadores QGIS PT. Desenvolvido por Alexander Bruy, Pedro Venâncio e Faunalia (http://www.faunalia.eu/).
 category=Plugins
