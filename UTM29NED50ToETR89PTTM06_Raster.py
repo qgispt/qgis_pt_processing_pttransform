@@ -5,7 +5,7 @@
     UTM29NED50ToETR89PTTM06_Raster.py
     ---------------------
     Date                 : July 2014
-    Copyright            : (C) 2014 by Pedro Ven√¢ncio, Giovanni Manghi
+    Copyright            : (C) 2014 by Pedro Ven‚ncio, Giovanni Manghi
     Email                : pedrongvenancio at yahoo dot com
                            giovanni dot manghi at gmail dot com
 ***************************************************************************
@@ -18,9 +18,9 @@
 ***************************************************************************
 """
 
-__author__ = 'Pedro Ven√¢ncio, Giovanni Manghi'
+__author__ = 'Pedro Ven‚ncio, Giovanni Manghi'
 __date__ = 'July 2014'
-__copyright__ = '(C) 2014, Pedro Ven√¢ncio, Giovanni Manghi'
+__copyright__ = '(C) 2014, Pedro Ven‚ncio, Giovanni Manghi'
 
 # This will get replaced with a git SHA1 when you do a git archive
 
@@ -53,9 +53,9 @@ class UTM29NED50ToETR89PTTM06_Raster(GdalAlgorithm):
 
     def defineCharacteristics(self):
         self.name = 'De UTM 29N ED50 para PT-TM06/ETRS89 Raster'
-        self.group = 'Transforma√ß√µes de Datum em Rasters'
+        self.group = 'TransformaÁıes de Datum em Rasters'
         self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
-        self.addOutput(OutputRaster(self.OUTPUT, 'Ficheiro de Sa√≠da'))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Ficheiro de SaÌda'))
 
     def processAlgorithm(self, progress):
         arguments = ['-s_srs',

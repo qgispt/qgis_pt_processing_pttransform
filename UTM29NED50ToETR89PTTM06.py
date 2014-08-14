@@ -53,11 +53,11 @@ class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
 
     def defineCharacteristics(self):
         self.name = 'De UTM 29N ED50 para PT-TM06/ETRS89'
-        self.group = 'TransformaÃ§Ãµes de Datum em Vectores'
+        self.group = 'Transformações de Datum em Vectores'
 
         self.addParameter(ParameterVector(self.INPUT, 'Ficheiro de Entrada',
                           [ParameterVector.VECTOR_TYPE_ANY]))
-        self.addOutput(OutputVector(self.OUTPUT, 'Ficheiro de SaÃ­da'))
+        self.addOutput(OutputVector(self.OUTPUT, 'Ficheiro de Saída'))
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)
