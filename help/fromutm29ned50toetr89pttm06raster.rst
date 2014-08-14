@@ -1,20 +1,22 @@
-ED50 to ETRS89-PTTM06
+De ED50 para ETRS89-PTTM06
 ================================
 
-Description
+Descrição
 -----------
 
-The tool takes an input raster layer defined with the "ED50" CRS (EPSG 23029) and creates an output geotiff defined with the ETRS89-PTTM06 CRS (EPSG 3763).
-Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
+Esta ferramenta usa como ficheiro de entrada um raster com "ED50" como Sistema de Referência Espacial (EPSG 23029). O ficheiro de saída será uma cópia do ficheiro de entrada mas em formato Geotiff e com ETRS89-PTTM06 como como Sistema de Referência Espacial (EPSG 3763).
 
-Parameters
+
+Parâmetros
 ----------
 
-- ``Input layer[Raster]``: Input raster
+- ``Ficheiro de entrada [raster]``: raster de entrada
 
-- ``Grid to use/origin[NTv2 Datum Transformation grid]``: Supported NTv2 grids is the ones provided by Prof. Jose Alberto Goncalves (UP)
+- ``Grelhas a usar/Origem[NTv2 grelhas de transformação de datum]``: Escolher uma de duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. Jose Alberto Goncalves da Faculdade de Ciências da Universidade do Porto (FCUP) ou as produzidas pela Direção-Geral do Territorio (DGT)
 
-Outputs
+
+Ficheiros de saida
 -------
 
-- ``Output[Raster]``: Output raster in Geotiff format
+- ``Ficheiro de saída [raster]``: raster de saída em formato Geotiff
+

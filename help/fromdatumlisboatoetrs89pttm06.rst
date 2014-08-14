@@ -1,20 +1,22 @@
-Datum Lisboa to ETRS89-PTTM06
+De Datum Lisboa para ETRS89-PTTM06
 ================================
 
-Description
+Descrição
 -----------
 
-The tool takes an input vector layer defined with the "Datum Lisboa" CRS (ESRI 102165 or EPSG 20791) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
-Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
+Esta ferramenta usa como ficheiro de entrada um vector com "Datum Lisboa" como Sistema de Referência Espacial (ESRI 102165 - EPSG 20791). O ficheiro de saída será um shapefile com ETRS89-PTTM06 como como Sistema de Referência Espacial (EPSG 3763).
 
-Parameters
+
+Parâmetros
 ----------
 
-- ``Input layer[Vector]``: Input vector
+- ``Ficheiro de entrada [Vector]``: vector de entrada
 
-- ``Grid to use/origin[NTv2 Datum Transformation grid]``: Supported NTv2 grids are the ones provided by Prof. Jose Alberto Goncalves (UP) and the ones provided by the Direcao-Geral do Territorio (DGT)
+- ``Grelhas a usar/Origem[NTv2 grelhas de transformação de datum]``: Escolher uma de duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. Jose Alberto Goncalves da Faculdade de Ciências da Universidade do Porto (FCUP) ou as produzidas pela Direção-Geral do Territorio (DGT)
 
-Outputs
+
+Ficheiros de saida
 -------
 
-- ``Output[Vector]``: Output vector in shapefile format
+- ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile
+
