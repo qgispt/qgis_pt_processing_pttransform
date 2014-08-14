@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: latin-1 -*-
 
 """
 ***************************************************************************
@@ -51,19 +51,19 @@ class Datum73MilToETR89PTTM06_Raster(GdalAlgorithm):
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
     GRID = 'GRELHAS'
-    GRID_OPTIONS = ['Jose Alberto Goncalves',
-                    'Direccao Geral do Territorio']
+    GRID_OPTIONS = ['José Alberto Gonçalves',
+                    'Direção-Geral do Territorio']
 
     def getIcon(self):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'From Datum 73 Militar to ETRS89-PTTM06 Raster'
-        self.group = 'Raster Datum Transformations'
-        self.addParameter(ParameterRaster(self.INPUT, 'Input layer', False))
-        self.addParameter(ParameterSelection(self.GRID, 'NTv2 Grid to use (source)',
+        self.name = 'De Datum 73 Militar para PT-TM06/ETRS89 Raster'
+        self.group = 'Transformações de Datum em Rasters'
+        self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
+        self.addParameter(ParameterSelection(self.GRID, 'Grelha NTv2 a usar (Fonte)',
                           self.GRID_OPTIONS))
-        self.addOutput(OutputRaster(self.OUTPUT, 'Output layer'))
+        self.addOutput(OutputRaster(self.OUTPUT, 'Ficheiro de Saída'))
 
     def processAlgorithm(self, progress):
         arguments = ['-s_srs']
