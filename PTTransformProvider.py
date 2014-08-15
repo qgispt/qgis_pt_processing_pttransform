@@ -73,10 +73,10 @@ class PTTransformProvider(AlgorithmProvider):
         AlgorithmProvider.unload(self)
 
     def getName(self):
-        return 'Transformações de Datum para Portugal'
+        return 'Transformação de Datum para Portugal'
 
     def getDescription(self):
-        return 'Transformações de Datum para Portugal'
+        return 'Transformação de Datum para Portugal'
 
     def getIcon(self):
         return QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')

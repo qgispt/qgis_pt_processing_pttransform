@@ -59,7 +59,7 @@ class Datum73MilToETR89PTTM06_Raster(GdalAlgorithm):
 
     def defineCharacteristics(self):
         self.name = 'De Datum 73 Militar para PT-TM06/ETRS89 Raster'
-        self.group = 'Transformações de Datum em Rasters'
+        self.group = 'Transformação de Datum em Rasters'
         self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
         self.addParameter(ParameterSelection(self.GRID, 'Grelha NTv2 a usar (Fonte)',
                           self.GRID_OPTIONS))
