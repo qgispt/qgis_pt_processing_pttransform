@@ -1,20 +1,31 @@
+<<<<<<< HEAD:help/dedatum73militarparapttm06etrs89raster.rst
 Datum 73 Militar to ETRS89-PTTM06
+=======
+De Datum 73 para PT-TM06/ETRS89
+>>>>>>> b6b6b43ec296e20ed1b33fbe7c0dc6473fb8cb4f:help/fromdatum73toetrs89pttm06.rst
 ================================
 
-Description
+Descrição
 -----------
 
+<<<<<<< HEAD:help/dedatum73militarparapttm06etrs89raster.rst
 The tool takes an input vector layer defined with the "Datum 73 Militar" CRS (ESRI 102160) and creates an output shapefile defined with the ETRS89-PTTM06 CRS (EPSG 3763).
 Datum transformation NTv2 are used in the process, to guarantee the smallest error as possible.
+=======
+Esta ferramenta usa como ficheiro de entrada um vector em "Datum 73" (ESRI 102161 - EPSG 27493). O ficheiro de saída será um shapefile no Sistema de Referência PT-TM06/ETRS89 (EPSG: 3763) (EPSG 3763).
+>>>>>>> b6b6b43ec296e20ed1b33fbe7c0dc6473fb8cb4f:help/fromdatum73toetrs89pttm06.rst
 
-Parameters
+
+Parâmetros
 ----------
 
-- ``Input layer[Vector]``: Input vector
+- ``Ficheiro de entrada [Vector]``: vector de entrada
 
-- ``Grid to use/origin[NTv2 Datum Transformation grid]``: Supported NTv2 grids are the ones provided by Prof. Jose Alberto Goncalves (UP) and the ones provided by the Direcao-Geral do Territorio (DGT)
+- ``Grelhas NTv2 [de transformação de Datum] a usar (Fonte)``: Escolher uma das duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. José Alberto Gonçalves, da Faculdade de Ciências da Universidade do Porto (FCUP) ou as produzidas pela Direção-Geral do Território (DGT).
 
-Outputs
+
+Ficheiros de saida
 -------
 
-- ``Output[Vector]``: Output vector in shapefile format
+- ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile
+

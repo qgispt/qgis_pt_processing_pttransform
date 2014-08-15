@@ -1,10 +1,10 @@
-De Datum 73 Militar para PT-TM06/ETRS89
+De Datum Lisboa Militar para PT-TM06/ETRS89
 ================================
 
 Descrição
 -----------
 
-Esta ferramenta usa como ficheiro de entrada um vector em "Datum 73 Militar" (ESRI 102160). O ficheiro de saída será um shapefile no Sistema de Referência PT-TM06/ETRS89 (EPSG: 3763) (EPSG 3763).
+Esta ferramenta usa como ficheiro de entrada um vector em "Datum Lisboa Militar" (ESRI 102164 - EPSG 20790). O ficheiro de saída será um shapefile no Sistema de Referência PT-TM06/ETRS89 (EPSG: 3763) (EPSG 3763).
 
 
 Parâmetros
@@ -19,3 +19,5 @@ Ficheiros de saida
 -------
 
 - ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile
+
+
