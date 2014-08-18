@@ -53,7 +53,7 @@ class UTM29NED50ToETR89PTTM06_Raster(GdalAlgorithm):
 
     def defineCharacteristics(self):
         self.name = 'De UTM 29N ED50 para PT-TM06/ETRS89 Raster'
-        self.group = 'Transformações de Datum em Rasters'
+        self.group = 'Transformação de Datum em Rasters'
         self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
         self.addOutput(OutputRaster(self.OUTPUT, 'Ficheiro de Saída'))
 

@@ -58,7 +58,7 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
     def defineCharacteristics(self):
         self.name = 'De Datum 73 para PT-TM06/ETRS89'
-        self.group = 'Transformações de Datum em Vectores'
+        self.group = 'Transformação de Datum em Vectores'
 
         self.addParameter(ParameterVector(self.INPUT, 'Ficheiro de Entrada',
                           [ParameterVector.VECTOR_TYPE_ANY]))

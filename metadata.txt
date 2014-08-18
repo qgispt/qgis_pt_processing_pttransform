@@ -9,7 +9,7 @@ qgisMinimumVersion=2.4
 icon=icons/pttransform.svg
 tags=processing,grelhas,ntv2,transformação,datum,Portugal
 
-author=Alexander Bruy, Pedro Venâncio, Giovanni Manghi
+author=Alexander Bruy, Pedro Venâncio, Faunalia (http://www.faunalia.eu/)
 email=qgis.portugal@gmail.com
 
 homepage=http://qgis.pt/plugins.html
