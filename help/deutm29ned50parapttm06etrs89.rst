@@ -1,13 +1,13 @@
 De ED50 para PT-TM06/ETRS89
 ================================
 
-Descri√ß√£o
+DescriÁ„o
 -----------
 
-Esta ferramenta usa como ficheiro de entrada um vector em "ED50" (EPSG 23029). O ficheiro de sa√≠da ser√° um shapefile no Sistema de Refer√™ncia PT-TM06/ETRS89 (EPSG 3763).
+Esta ferramenta usa como ficheiro de entrada um vector em "ED50" (EPSG 23029). O ficheiro de saÌda ser· um shapefile no Sistema de ReferÍncia PT-TM06/ETRS89 (EPSG 3763).
 
 
-Par√¢metros
+Par‚metros
 ----------
 
 - ``Ficheiro de entrada [Vector]``: vector de entrada
@@ -16,4 +16,4 @@ Par√¢metros
 Ficheiros de saida
 -------
 
-- ``Ficheiro de sa√≠da [Vector]``: vector de sa√≠da em formato shapefile
+- ``Ficheiro de saÌda [Vector]``: vector de saÌda em formato shapefile

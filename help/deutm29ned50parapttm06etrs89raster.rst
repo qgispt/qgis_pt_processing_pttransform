@@ -1,13 +1,13 @@
 De ED50 para PT-TM06/ETRS89
 ================================
 
-DescriÃ§Ã£o
+Descrição
 -----------
 
-Esta ferramenta usa como ficheiro de entrada um raster em "ED50" (EPSG 23029). O ficheiro de saÃ­da serÃ¡ um GeoTIFF no Sistema de ReferÃªncia PT-TM06/ETRS89 (EPSG 3763).
+Esta ferramenta usa como ficheiro de entrada um raster em "ED50" (EPSG 23029). O ficheiro de saída será um GeoTIFF no Sistema de Referência PT-TM06/ETRS89 (EPSG 3763).
 
 
-ParÃ¢metros
+Parâmetros
 ----------
 
 - ``Ficheiro de entrada [raster]``: raster de entrada
@@ -16,4 +16,4 @@ ParÃ¢metros
 Ficheiros de saida
 -------
 
-- ``Ficheiro de saÃ­da [raster]``: raster de saÃ­da em formato GeoTIFF
+- ``Ficheiro de saída [raster]``: raster de saída em formato GeoTIFF
