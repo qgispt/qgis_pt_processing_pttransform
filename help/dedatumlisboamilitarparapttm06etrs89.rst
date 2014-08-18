@@ -1,21 +1,21 @@
 De Datum Lisboa Militar para PT-TM06/ETRS89
 ================================
 
-DescriÃ§Ã£o
+Descrição
 -----------
 
-Esta ferramenta usa como ficheiro de entrada um vector em "Datum Lisboa Militar" (ESRI 102164 - EPSG 20790). O ficheiro de saÃ­da serÃ¡ um shapefile no Sistema de ReferÃªncia PT-TM06/ETRS89 (EPSG 3763).
+Esta ferramenta usa como ficheiro de entrada um vector em "Datum Lisboa Militar" (ESRI 102164 - EPSG 20790). O ficheiro de saída será um shapefile no Sistema de Referência PT-TM06/ETRS89 (EPSG 3763).
 
 
-ParÃ¢metros
+Parâmetros
 ----------
 
 - ``Ficheiro de entrada [Vector]``: vector de entrada
 
-- ``Grelhas NTv2 [de transformaÃ§Ã£o de Datum] a usar (Fonte)``: Escolher uma das duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. JosÃ© Alberto GonÃ§alves, da Faculdade de CiÃªncias da Universidade do Porto (FCUP) ou as produzidas pela DireÃ§Ã£o-Geral do TerritÃ³rio (DGT).
+- ``Grelhas NTv2 [de transformação de Datum] a usar (Fonte)``: Escolher uma das duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. José Alberto Gonçalves, da Faculdade de Ciências da Universidade do Porto (FCUP) ou as produzidas pela Direção-Geral do Território (DGT).
 
 
 Ficheiros de saida
 -------
 
-- ``Ficheiro de saÃ­da [Vector]``: vector de saÃ­da em formato shapefile
+- ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile
