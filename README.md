@@ -17,7 +17,7 @@ O plugin foi criado com o objetivo de ser o mais simples possível para o utiliz
 
 ![](/icons/pttransform_menu.png)
 
-Assim, se o utilizador pretender, por exemplo, transformar uma shapefile no Datum Lisboa para PT-TM06/ETRS89, só terá de expandir o menu "Transformação de Datum em Vectores" e executar a ferramenta "De Datum Lisboa para ETRS89-PTTM06), selecionar a shapefile de entrada, escolher a grelha NTv2 a usar (do Professor José Alberto Gonçalves ou da Direção-Geral do Território), definir o caminho para a shapefile resultante e executar a ferramenta.
+Assim, se o utilizador pretender, por exemplo, transformar uma shapefile no Datum Lisboa para PT-TM06/ETRS89, só terá de expandir o menu "Transformação de Datum em Vectores" e executar a ferramenta "De Datum Lisboa para ETRS89-PTTM06", selecionar a shapefile de entrada, escolher a grelha NTv2 a usar (do Professor José Alberto Gonçalves ou da Direção-Geral do Território), definir o caminho para a shapefile resultante e executar a ferramenta.
 
 ![](/icons/pttransform_gui.png)
 
