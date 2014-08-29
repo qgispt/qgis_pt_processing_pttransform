@@ -77,8 +77,7 @@ class Datum73MilToETR89PTTM06(OgrAlgorithm):
         arguments = ['-s_srs']
         if self.getParameterValue(self.GRID) == 0:
             # Jose Alberto Goncalves
-            arguments.append('+proj=tmerc +lat_0=39.66666666666666 '
-                             '+lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/pt73_e89.gsb +wktext +units=m +no_defs')
+            arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/pt73_e89.gsb +wktext +units=m +no_defs')
         else:
             # Direccao Geral do Territorio
             arguments.append('+proj=tmerc +lat_0=39.66666666666666 +lon_0=-8.131906111111112 +k=1 +x_0=200180.598 +y_0=299913.01 +ellps=intl +nadgrids=' + os.path.dirname(__file__) + '/grids/D73_ETRS89_geo.gsb +wktext +units=m +no_defs')
