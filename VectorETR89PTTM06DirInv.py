@@ -67,7 +67,7 @@ class VectorETR89PTTM06DirInv(OgrAlgorithm):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'Transformação Directa e Inversa de Vectores'
+        self.name = 'Transformacao Directa e Inversa de Vectores'
         self.group = 'Transformação Directa e Inversa'
         self.addParameter(ParameterVector(self.INPUT, 'Ficheiro de Entrada',
                           [ParameterVector.VECTOR_TYPE_ANY]))
