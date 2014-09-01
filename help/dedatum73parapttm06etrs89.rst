@@ -15,7 +15,7 @@ Parâmetros
 - ``Grelhas NTv2 [de transformação de Datum] a usar (Fonte)``: Escolher uma das duas grelhas NTv2 suportadas - as desenvolvidas pelo Prof. José Alberto Gonçalves, da Faculdade de Ciências da Universidade do Porto (FCUP), ou as produzidas pela Direção-Geral do Território (DGT).
 
 
-Ficheiros de saida
+Ficheiros de saída
 -------
 
 - ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile

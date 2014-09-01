@@ -13,7 +13,7 @@ Parâmetros
 - ``Ficheiro de entrada [Raster]``: raster de entrada
 
 
-Ficheiros de saida
+Ficheiros de saída
 -------
 
 - ``Ficheiro de saída [Raster]``: raster de saída em formato GeoTIFF
