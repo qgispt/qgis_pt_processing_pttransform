@@ -43,8 +43,8 @@ from processing_pttransform.Datum73ToETR89PTTM06_Raster import Datum73ToETR89PTT
 from processing_pttransform.Datum73MilToETR89PTTM06_Raster import Datum73MilToETR89PTTM06_Raster
 from processing_pttransform.UTM29NED50ToETR89PTTM06_Raster import UTM29NED50ToETR89PTTM06_Raster
 from processing_pttransform.UTM29NED50ToETR89PTTM06 import UTM29NED50ToETR89PTTM06
-from processing_pttransform.VectorToETR89PTTM06 import VectorToETR89PTTM06
-from processing_pttransform.RasterToETR89PTTM06 import RasterToETR89PTTM06
+from processing_pttransform.VectorETR89PTTM06DirInv import VectorETR89PTTM06DirInv
+from processing_pttransform.RasterETR89PTTM06DirInv import RasterETR89PTTM06DirInv
 
 
 class PTTransformProvider(AlgorithmProvider):
@@ -64,8 +64,8 @@ class PTTransformProvider(AlgorithmProvider):
                         Datum73MilToETR89PTTM06_Raster(),
                         UTM29NED50ToETR89PTTM06_Raster(),
                         UTM29NED50ToETR89PTTM06(),
-                        VectorToETR89PTTM06(),
-                        RasterToETR89PTTM06()
+                        VectorETR89PTTM06DirInv(),
+                        RasterETR89PTTM06DirInv()
                        ]
         for alg in self.alglist:
             alg.provider = self
