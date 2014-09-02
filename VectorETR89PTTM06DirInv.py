@@ -6,7 +6,7 @@
     ---------------------
     Date                 : August 2014
     Copyright            : (C) 2014 by Pedro Venâncio
-    Email                : pedrongvenancio at yahoo dot com
+    Email                : pedrongvenancio at gmail dot com
 ***************************************************************************
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
