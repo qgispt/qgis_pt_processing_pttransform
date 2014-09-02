@@ -6,7 +6,7 @@
     ---------------------
     Date                 : July 2014
     Copyright            : (C) 2014 by Pedro Venâncio, Giovanni Manghi
-    Email                : pedrongvenancio at yahoo dot com
+    Email                : pedrongvenancio at gmail dot com
                            giovanni dot manghi at gmail dot com
 ***************************************************************************
 *                                                                         *
