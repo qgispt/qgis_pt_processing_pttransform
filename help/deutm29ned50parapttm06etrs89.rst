@@ -13,7 +13,7 @@ Parâmetros
 - ``Ficheiro de entrada [Vector]``: vector de entrada
 
 
-Ficheiros de saida
+Ficheiros de saída
 -------
 
 - ``Ficheiro de saída [Vector]``: vector de saída em formato shapefile

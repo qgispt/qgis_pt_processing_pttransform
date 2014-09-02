@@ -65,7 +65,7 @@ class RasterETR89PTTM06DirInv(GdalAlgorithm):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
 
     def defineCharacteristics(self):
-        self.name = 'Transformação Directa e Inversa de Rasters'
+        self.name = 'Transformacao Directa e Inversa de Rasters'
         self.group = 'Transformação Directa e Inversa'
         self.addParameter(ParameterRaster(self.INPUT, 'Ficheiro de Entrada', False))
         self.addParameter(ParameterSelection(self.TRANSF, 'Transformação',
