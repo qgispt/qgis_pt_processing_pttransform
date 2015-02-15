@@ -1,15 +1,15 @@
 [general]
 name=Transformação de Datum para Portugal
 description=Transformação de Datum dos SRCs usados no passado em Portugal Continental (Datum 73, Datum Lisboa e Datum Europeu 1950) para o novo SRC PT-TM06/ETRS89, utilizando as grelhas NTv2 do Professor José Alberto Gonçalves e da Direção-Geral do Território.
-about=Apoiado pelo Grupo de Utilizadores QGIS PT. Desenvolvido por Alexander Bruy, Pedro Venâncio e Faunalia (http://www.faunalia.eu/).
+about=Apoiado pelo Grupo de Utilizadores QGIS PT. Desenvolvido por Alexander Bruy, Pedro Venâncio e NaturalGIS (http://www.naturalgis.pt/).
 category=Plugins
-version=0.1.0
+version=0.1.1
 qgisMinimumVersion=2.4
 
 icon=icons/pttransform.svg
 tags=processing,grelhas,ntv2,transformação,datum,Portugal
 
-author=Alexander Bruy, Pedro Venâncio, Faunalia (http://www.faunalia.eu/)
+author=Alexander Bruy, Pedro Venâncio, NaturalGIS (http://www.naturalgis.pt/)
 email=qgis.portugal@gmail.com
 
 homepage=http://qgis.pt/plugins.html
