@@ -23,4 +23,4 @@ Assim, se o utilizador pretender, por exemplo, transformar uma shapefile no Datu
 
 Tal como qualquer outra ferramenta da Caixa de Ferramentas de Processamento, estas ferramentas podem ser executadas em lote.
 
-O plugin foi desenvolvido por Alexander Bruy, Pedro Venâncio e Faunalia (http://www.faunalia.eu/) com o suporte do Grupo de Utilizadores QGIS PT (http://www.qgis.pt/).
+O plugin foi desenvolvido por Alexander Bruy, Pedro Venâncio e NaturalGIS (http://www.naturalgis.pt/), com o suporte do Grupo de Utilizadores QGIS PT (http://www.qgis.pt/).

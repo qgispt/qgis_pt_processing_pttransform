@@ -77,7 +77,7 @@ class PTTransformProvider(AlgorithmProvider):
         AlgorithmProvider.unload(self)
 
     def getName(self):
-        return 'transgridpt'
+        return 'processing_pttransform'
 
     def getDescription(self):
         return u'Transformação de Datum para Portugal'

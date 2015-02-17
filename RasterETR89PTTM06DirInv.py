@@ -25,11 +25,14 @@ __copyright__ = '(C) 2014, Pedro Venâncio'
 
 __revision__ = '$Format:%H$'
 
+import inspect
 import os
 
 from PyQt4.QtGui import *
 
 from qgis.core import *
+
+from processing.gui.Help2Html import getHtmlFromRstFile
 
 try:
     from processing.parameters.ParameterRaster import ParameterRaster
@@ -63,6 +66,15 @@ class RasterETR89PTTM06DirInv(GdalAlgorithm):
 
     def getIcon(self):
         return  QIcon(os.path.dirname(__file__) + '/icons/pttransform.svg')
+
+    def help(self):
+        name = self.commandLineName().split(':')[1].lower()
+        filename = os.path.join(os.path.dirname(inspect.getfile(self.__class__)), 'help', name + '.rst')
+        try:
+          html = getHtmlFromRstFile(filename)
+          return True, html
+        except:
+          return False, None
 
     def defineCharacteristics(self):
         self.name = 'Transformacao Directa e Inversa de Rasters'
