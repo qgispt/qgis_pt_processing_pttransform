@@ -44,11 +44,12 @@ except:
 
 from processing.tools.system import *
 
-from processing.algs.gdal.OgrAlgorithm import OgrAlgorithm
+from processing.core.GeoAlgorithm import GeoAlgorithm
 from processing.algs.gdal.GdalUtils import GdalUtils
+from processing.tools.vector import ogrConnectionString
 
 
-class Datum73ToETR89PTTM06(OgrAlgorithm):
+class Datum73ToETR89PTTM06(GeoAlgorithm):
 
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
@@ -80,7 +81,7 @@ class Datum73ToETR89PTTM06(OgrAlgorithm):
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)
-        conn = self.ogrConnectionString(inLayer)
+        conn = ogrConnectionString(inLayer)
 
         output = self.getOutputFromName(self.OUTPUT)
         outFile = output.value

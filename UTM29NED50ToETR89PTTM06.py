@@ -41,12 +41,13 @@ except:
     from processing.core.parameters import ParameterVector
     from processing.core.outputs import OutputVector
 
-from processing.algs.gdal.OgrAlgorithm import OgrAlgorithm
+from processing.core.GeoAlgorithm import GeoAlgorithm
 from processing.algs.gdal.GdalUtils import GdalUtils
+from processing.tools.vector import ogrConnectionString
 
 from processing.tools.system import *
 
-class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
+class UTM29NED50ToETR89PTTM06(GeoAlgorithm):
 
     INPUT = 'INPUT'
     OUTPUT = 'OUTPUT'
@@ -73,7 +74,7 @@ class UTM29NED50ToETR89PTTM06(OgrAlgorithm):
 
     def processAlgorithm(self, progress):
         inLayer = self.getParameterValue(self.INPUT)
-        conn = self.ogrConnectionString(inLayer)
+        conn = ogrConnectionString(inLayer)
 
         output = self.getOutputFromName(self.OUTPUT)
         outFile = output.value
